@@ -1,0 +1,60 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Before and After Barbershop &middot; Roseland, Chicago</title><meta name="description" content="Before and After Barbershop, 10251 S Calumet Ave, Chicago. Professional barbers at a reasonable rate.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><rect width='10' height='10' fill='%23151515'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{background:#f2f1ee}body{font-family:'DM Sans',sans-serif;color:#151515;background:#f2f1ee;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.site-header{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,4vw,48px);color:#fff;transition:color .3s}
+.site-header::before{content:"";position:absolute;inset:0 0 auto 0;height:180%;z-index:-1;background:linear-gradient(to bottom,rgba(6,4,3,.62),rgba(6,4,3,0));transition:opacity .3s}
+.site-header.on-light{color:#111}.site-header.on-light::before{opacity:.15}
+.brand{font-family:'DM Serif Display',serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;text-decoration:none;text-shadow:0 1px 22px rgba(0,0,0,.55)}
+.site-header nav a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;margin-left:22px;text-shadow:0 1px 22px rgba(0,0,0,.55)}
+.film{height:420vh;position:relative}.stage{position:sticky;top:0;height:100vh;overflow:hidden}
+.stage canvas{width:100%;height:100%;display:block}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.10;background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.55))}
+.seam{position:absolute;inset:0;background:#f2f1ee;opacity:0;pointer-events:none}
+.beat{position:absolute;color:#fff;opacity:0;will-change:opacity,transform;max-width:min(640px,86vw)}
+.beat::before{content:"";position:absolute;z-index:-1;inset:-70% -24% -70% -14%;background:radial-gradient(60% 58% at 22% 50%,rgba(6,3,1,.72),rgba(6,3,1,.42) 45%,transparent 78%)}
+.beat h1,.beat h2{font-family:'DM Serif Display',serif;font-weight:400;line-height:.95;text-shadow:0 2px 30px rgba(0,0,0,.5)}
+.beat h1{font-size:clamp(46px,9vw,132px)}.beat h2{font-size:clamp(34px,5.6vw,84px)}.beat p{margin-top:14px;font-size:clamp(15px,1.4vw,19px);line-height:1.5;max-width:34ch}
+.beat .k{font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.85;margin-bottom:14px;display:block}
+.ch{display:inline-block}
+.section{min-height:min(92vh,900px);display:flex;align-items:center;padding:clamp(60px,9vw,130px) clamp(20px,6vw,90px)}
+.section .wrap{width:100%;max-width:1180px;margin:0 auto}
+.section .wrap>*{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.section.in .wrap>*{opacity:1;transform:none}.section.in .wrap>*:nth-child(2){transition-delay:.09s}.section.in .wrap>*:nth-child(3){transition-delay:.18s}.section.in .wrap>*:nth-child(4){transition-delay:.27s}
+.big{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(48px,9vw,150px);line-height:.92;letter-spacing:-.01em}
+.lab{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#151515;margin-bottom:20px;display:block}
+.lede{font-size:clamp(17px,1.6vw,22px);line-height:1.55;max-width:52ch;margin-top:26px;opacity:.88}
+.rvs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:40px}
+.rv{padding:28px;border:1px solid #d8d6d0;border-radius:4px;background:#fff}.rv blockquote{font-size:17px;line-height:1.55}.rv figcaption{margin-top:16px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.6}
+.hours{border-collapse:collapse;margin-top:30px;min-width:min(420px,100%)}.hours th,.hours td{text-align:left;padding:11px 0;border-bottom:1px solid #d8d6d0;font-weight:400}.hours th{opacity:.7;padding-right:40px}
+.visit{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(30px,6vw,90px);align-items:end}@media(max-width:820px){.visit{grid-template-columns:1fr}}
+.cta{display:inline-flex;align-items:center;gap:18px;margin-top:34px;padding:20px 30px;border-radius:999px;background:#151515;color:#fff;text-decoration:none;position:relative;overflow:hidden;box-shadow:0 0 40px #15151555;transition:transform .2s}
+.cta span{font-size:12px;letter-spacing:.24em;text-transform:uppercase;padding-right:18px;border-right:1px solid currentColor}.cta b{font-family:'DM Serif Display',serif;font-weight:400;font-size:clamp(22px,2.6vw,32px)}
+.cta::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);transition:transform .8s}.cta:hover::after{transform:translateX(120%)}.cta:active{transform:translateY(2px)}
+.addr{font-size:clamp(20px,2.2vw,28px);line-height:1.35;margin-top:22px}.addr a{font-size:14px;letter-spacing:.14em;text-transform:uppercase;display:inline-block;margin-top:14px}
+footer{padding:40px clamp(20px,6vw,90px);border-top:1px solid #d8d6d0;font-size:13px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;opacity:.8}
+footer svg{width:18px;height:18px;vertical-align:middle;fill:currentColor}
+.site-header.on-light{color:#151515}.cta{box-shadow:none}
+@media (prefers-reduced-motion: reduce){.section .wrap>*{opacity:1;transform:none;transition:none}}
+</style></head><body>
+<header class="site-header"><a class="brand" href="#top">Before and After Barbershop</a><nav><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav></header>
+<main id="top">
+<section class="film" aria-label="Before and After Barbershop"><div class="stage"><canvas></canvas><div class="vig"></div><div class="grain"></div>
+<div class="beat" data-in="-0.1" data-peak="0" data-out="0.28" style="left:7vw;bottom:15vh"><span class="k">Roseland &middot; South Calumet Ave</span><h1 data-split>Before</h1><p>&amp; After Barbershop. 4.8 stars on Google.</p></div>
+<div class="beat" data-in="0.36" data-peak="0.5" data-out="0.64" style="right:7vw;top:30vh;text-align:right"><h2>Professional<br>barbers.</h2><p style="margin-left:auto">A comfortable chair at a reasonable rate.</p></div>
+<div class="beat" data-in="0.7" data-peak="0.84" data-out="2" style="left:7vw;bottom:16vh"><h1>After.</h1><p>Tuesday to Saturday, from 8 AM.</p></div>
+<div class="seam"></div></div></section>
+<section class="section"><div class="wrap"><span class="lab">The difference</span><h2 class="big">Walk in<br><span style="opacity:.35">before.</span><br>Walk out after.</h2><p class="lede">Before and After Barbershop serves Roseland from 10251 S Calumet Ave, open Tuesday through Saturday.</p></div></section>
+<section class="section" id="reviews"><div class="wrap"><span class="lab">From Google reviews</span><h2 class="big">Rated<br>4.8.</h2><div class="rvs"><figure class="rv"><blockquote>&ldquo;Professional barbers, comfortable atmosphere, at a reasonable rate. I recommend to anyone.&rdquo;</blockquote><figcaption>Google review &middot; Nov 2018</figcaption></figure></div></div></section>
+<section class="section" id="visit"><div class="wrap visit"><div><span class="lab">Visit</span><h2 class="big">Find<br>us.</h2><p class="addr">10251 S Calumet Ave, Chicago, IL 60628<br><a href="https://www.google.com/maps/search/?api=1&query=Before+and+After+Barbershop+10251+S+Calumet+Ave,+Chicago,+IL+60628" target="_blank" rel="noopener">Directions &rarr;</a></p><a class="cta" href="mailto:b4andafterbarbershop@gmail.com"><span>Email</span><b>b4andafterbarbershop@gmail.com</b></a></div>
+<div><table class="hours"><tr><th>Mon</th><td>Closed</td></tr><tr><th>Tue</th><td>8 AM–6 PM</td></tr><tr><th>Wed</th><td>8 AM–6 PM</td></tr><tr><th>Thu</th><td>8 AM–6 PM</td></tr><tr><th>Fri</th><td>8 AM–7 PM</td></tr><tr><th>Sat</th><td>7:30 AM–7 PM</td></tr><tr><th>Sun</th><td>Closed</td></tr></table></div></div></section>
+</main>
+<footer><span>&copy; Before and After Barbershop &middot; 10251 S Calumet Ave, Chicago, IL 60628</span><span><a href="https://facebook.com/492888330901430" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg></a> &nbsp; Preview built by Richard Sanches</span></footer>
+<script>window.FILM={images:["img/1.jpg", "img/2.jpg"],shots:[{"img": 0, "from": {"s": 1.0, "x": 0, "y": 0}, "to": {"s": 1.3, "x": -0.4, "y": 0}, "fx": -0.3}, {"img": 1, "from": {"s": 1.3, "x": 0.2, "y": 0.2}, "to": {"s": 1.0, "x": 0, "y": 0}, "fx": 0}, {"img": 0, "from": {"s": 1.35, "x": 0.5, "y": 0}, "to": {"s": 1.1, "x": 0.6, "y": 0}, "fx": 0.4}],bg:"#f2f1ee",light:true};</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="../js/film.js"></script></body></html>
