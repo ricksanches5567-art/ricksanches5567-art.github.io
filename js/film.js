@@ -19,8 +19,11 @@
     const sC = Math.max(cw/bw, ch/bh), crop = 1 - Math.min(cw/(bw*sC), ch/(bh*sC));
     const s = crop > MAX_CROP ? Math.min(cw/bw, ch/bh) : sC, w = bw*s, h = bh*s;
     ctx.fillStyle = cfg.seam; ctx.fillRect(0,0,cw,ch); ctx.drawImage(bm, (cw-w)/2, (ch-h)/2, w, h); }
-  function nearest(i){ for (let d=0; d<N; d++){ for (const j of [i-d, i+d]) if (j>=0 && j<N){ if (bitmaps.has(j)) return bitmaps.get(j); const im=images[j]; if (im && im.complete && im.naturalWidth) return im; } } return null; }
-  function drawFrame(i, force){ if (i === displayed && !force) return; const bm = nearest(i); if (!bm) return; fit(bm); displayed = i; }
+  let posterBm = null;
+  // nearest DECODED bitmap only — drawing an HTMLImageElement forces a synchronous decode (the jank spike)
+  function nearest(i){ for (let d=0; d<N; d++){ for (const j of [i-d, i+d]) if (j>=0 && j<N && bitmaps.has(j)) return bitmaps.get(j); } return posterBm; }
+  let shownBm = null;
+  function drawFrame(i, force){ if (i === displayed && !force) return; const bm = nearest(i); if (!bm) return; if (bm !== shownBm || force){ fit(bm); shownBm = bm; } displayed = bitmaps.has(i) ? i : -1; }
   function ensureBitmaps(c){ if (Math.abs(c - bmpCenter) < 3) return; bmpCenter = c;
     const lo = Math.max(0, c-KEEP), hi = Math.min(N-1, c+AHEAD);
     for (let i=lo; i<=hi; i++){ const im = images[i]; if (bitmaps.has(i) || decoding.has(i) || !im || !im.complete || !im.naturalWidth) continue;
@@ -35,10 +38,11 @@
   function setBeats(p){ beats.forEach(b => { let a=0; if (p>=b.in && p<=b.out){ a = p<b.peak ? (p-b.in)/Math.max(1e-4,b.peak-b.in) : (b.out>1.5?1:1-(p-b.peak)/Math.max(1e-4,b.out-b.peak)); }
       b.el.style.opacity = a.toFixed(3); b.el.style.transform = `translateY(${(1-a)*24}px)`; b.el.style.pointerEvents = a>.5?'auto':'none'; });
     if (fade) fade.style.opacity = Math.max(0, (p-.93)/.07).toFixed(3); }
-  let lastLum = 0;
+  let lastLum = 0; const lc = document.createElement('canvas'); lc.width=32; lc.height=4; const lctx = lc.getContext('2d', {willReadFrequently:true});
   function lum(now){ if (!header || now-lastLum < 180) return; lastLum = now;
     if (drive.getBoundingClientRect().bottom < 80){ header.classList.toggle('on-light', !!cfg.light); return; }
-    try{ const d = ctx.getImageData(0,0,cv.width,Math.max(1,cv.height*.08|0)).data; let s=0,c=0; for(let q=0;q<d.length;q+=4*97){ s+=.299*d[q]+.587*d[q+1]+.114*d[q+2]; c++; }
+    if (!shownBm) return;
+    try{ lctx.clearRect(0,0,32,4); lctx.drawImage(shownBm, 0,0,shownBm.width,Math.max(1,shownBm.height*.08|0), 0,0,32,4); const d = lctx.getImageData(0,0,32,4).data; let s=0,c=0; for(let q=0;q<d.length;q+=4){ s+=.299*d[q]+.587*d[q+1]+.114*d[q+2]; c++; }
       header.classList.toggle('on-light', s/c > 138); }catch(e){} }
   let lastT = performance.now(), maxD = 0, lastP = -1; const deltas = [];
   function tick(now){ const dt = now-lastT; lastT = now; if (dt>maxD) maxD = dt; deltas.push(dt); if (deltas.length>600) deltas.shift();
@@ -52,9 +56,9 @@
   size(); addEventListener('resize', size);
   const poster = new Image(); poster.src = cfg.poster;
   if (RM){ // reduced motion: still poster, no scrub, no pump
-    poster.onload = () => { fit(poster); setBeats(0); window.__ready = true; }; beats.forEach(b=>b.el.style.opacity=1); return; }
+    poster.onload = () => { fit(poster); shownBm = null; setBeats(0); window.__ready = true; }; beats.forEach(b=>b.el.style.opacity=1); return; }
   pump();
-  poster.decode().catch(()=>{}).then(()=>{ if (displayed<0 && poster.naturalWidth) fit(poster);
+  poster.decode().catch(()=>{}).then(()=> poster.naturalWidth ? createImageBitmap(poster).then(b=>{ posterBm = b; if (!shownBm){ fit(b); shownBm = b; } }) : 0).then(()=>{
     const first = images.slice(0, 24); return Promise.all(first.map(im => im && (im.complete ? 0 : new Promise(r=>{ im.addEventListener('load', r, {once:true}); im.addEventListener('error', r, {once:true}); }))));
   }).then(()=>{
     if (JUMP===null && window.Lenis){ const lenis = new Lenis({lerp:.09, smoothWheel:true}); (function raf(t){ lenis.raf(t); requestAnimationFrame(raf); })(performance.now()); }
