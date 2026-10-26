@@ -1,61 +1,106 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Legacy Cutz &middot; Lilydale, Chicago</title><meta name="description" content="Legacy Cutz barbershop, 332 E 95th St, Chicago. 4.9 stars on Google.">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Legacy Cutz &middot; Barbershop at 332 E 95th St, Chicago</title>
+<meta name="description" content="Legacy Cutz, a barbershop at 332 E 95th St, Chicago. Rated 4.9 from 53 Google reviews. Design cuts, fades and kids' cuts. Call to book.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><rect width='10' height='10' fill='%23c9a24a'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}html{background:#140d09}body{font-family:'Inter',sans-serif;color:#f4e9dc;background:#140d09;-webkit-font-smoothing:antialiased}
+:root{--bg:#140d09;--ink:#f4e9dc;--au:#c9a24a;--au2:#e8c977;--line:#3a2a1e;--card:#1c130d;--disp:'Playfair Display',serif}
+*{box-sizing:border-box;margin:0;padding:0}html{background:var(--bg)}body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.site-header{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,4vw,48px);color:#fff;transition:color .3s}
-.site-header::before{content:"";position:absolute;inset:0 0 auto 0;height:180%;z-index:-1;background:linear-gradient(to bottom,rgba(6,4,3,.62),rgba(6,4,3,0));transition:opacity .3s}
-.site-header.on-light{color:#111}.site-header.on-light::before{opacity:.15}
-.brand{font-family:'Playfair Display',serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;text-decoration:none;text-shadow:0 1px 22px rgba(0,0,0,.55)}
-.site-header nav a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;margin-left:22px;text-shadow:0 1px 22px rgba(0,0,0,.55)}
-.film{height:440vh;position:relative}.stage{position:sticky;top:0;height:100vh;overflow:hidden}
-.stage canvas{width:100%;height:100%;display:block;background:#140d09 url(poster.jpg) center/cover no-repeat}
-.loadbar{position:absolute;left:0;right:0;bottom:0;height:2px;z-index:5;transition:opacity .6s}.loadbar i{display:block;height:100%;background:#c9a24a;transform:scaleX(0);transform-origin:0 50%;transition:transform .2s}.loaded .loadbar{opacity:0}
-.grain{position:absolute;inset:0;pointer-events:none;opacity:.10;background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
-.vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.55))}
-.seam{position:absolute;inset:0;background:#140d09;opacity:0;pointer-events:none}
-.beat{position:absolute;color:#fff;opacity:0;will-change:opacity,transform;max-width:min(640px,86vw)}
-.beat::before{content:"";position:absolute;z-index:-1;inset:-70% -24% -70% -14%;background:radial-gradient(60% 58% at 22% 50%,rgba(6,3,1,.72),rgba(6,3,1,.42) 45%,transparent 78%)}
-.beat h1,.beat h2{font-family:'Playfair Display',serif;font-weight:400;line-height:.95;text-shadow:0 2px 30px rgba(0,0,0,.5)}
-.beat h1{font-size:clamp(46px,9vw,132px)}.beat h2{font-size:clamp(34px,5.6vw,84px)}.beat p{margin-top:14px;font-size:clamp(15px,1.4vw,19px);line-height:1.5;max-width:34ch}
-.beat .k{font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.85;margin-bottom:14px;display:block}
+.site-header{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,4vw,48px);color:#fff}
+.site-header::before{content:"";position:absolute;inset:0 0 auto 0;height:170%;z-index:-1;background:linear-gradient(to bottom,rgba(10,6,3,.62),rgba(10,6,3,0))}
+.site-header.on-light{color:#111}
+.brand{font-family:var(--disp);font-size:clamp(19px,2.2vw,26px);text-decoration:none}.brand i{color:var(--au);font-weight:400}
+.site-header nav a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;margin-left:22px}
+.site-header nav .hc{background:var(--au);color:#140d09;padding:9px 16px;border-radius:3px;font-weight:600}
+@media(max-width:640px){.site-header nav a:not(.hc){display:none}}
+.film{height:900vh;position:relative}.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.stage canvas{width:100%;height:100%;display:block;background:var(--bg) url(poster.jpg) center/cover no-repeat}
+@media (orientation:portrait) and (max-width:900px){.stage canvas{background-image:url(poster-m.jpg)}}
+.loadbar{position:absolute;left:0;right:0;bottom:0;height:2px;z-index:5;transition:opacity .6s}.loadbar i{display:block;height:100%;background:var(--au);transform:scaleX(0);transform-origin:0 50%;transition:transform .2s}.loaded .loadbar{opacity:0}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.6))}
+.seam{position:absolute;inset:0;background:var(--bg);opacity:0;pointer-events:none}
+.beat{position:absolute;color:#fff;opacity:0;will-change:opacity,transform;max-width:min(620px,88vw)}
+.beat::before{content:"";position:absolute;z-index:-1;inset:-70% -24% -70% -14%;background:radial-gradient(60% 58% at 30% 50%,rgba(10,6,3,.78),rgba(10,6,3,.4) 45%,transparent 78%)}
+.beat h1,.beat h2{font-family:var(--disp);font-weight:700;line-height:1;text-shadow:0 2px 30px rgba(0,0,0,.5)}.beat h1 i,.beat h2 i{font-weight:400;color:var(--au2)}
+.beat h1{font-size:clamp(50px,9vw,136px)}.beat h2{font-size:clamp(38px,5.6vw,84px)}.beat p{margin-top:14px;font-size:clamp(15px,1.4vw,19px);line-height:1.55;max-width:36ch}
+.k{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--au2);margin-bottom:14px;display:block}
+.stars{display:inline-flex;gap:10px;align-items:center;margin-top:18px;padding:8px 16px;border:1px solid rgba(232,201,119,.5);border-radius:3px;font-size:14px}.stars b{color:var(--au2);font-size:18px}
 .ch{display:inline-block}
-.section{min-height:min(92vh,900px);display:flex;align-items:center;padding:clamp(60px,9vw,130px) clamp(20px,6vw,90px)}
-.section .wrap{width:100%;max-width:1180px;margin:0 auto}
-.section .wrap>*{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-.section.in .wrap>*{opacity:1;transform:none}.section.in .wrap>*:nth-child(2){transition-delay:.09s}.section.in .wrap>*:nth-child(3){transition-delay:.18s}.section.in .wrap>*:nth-child(4){transition-delay:.27s}
-.big{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(48px,9vw,150px);line-height:.92;letter-spacing:-.01em}
-.lab{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#c9a24a;margin-bottom:20px;display:block}
-.lede{font-size:clamp(17px,1.6vw,22px);line-height:1.55;max-width:52ch;margin-top:26px;opacity:.88}
-.rvs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:40px}
-.rv{padding:28px;border:1px solid #3a2a1e;border-radius:4px;background:#1c130d}.rv blockquote{font-size:17px;line-height:1.55}.rv figcaption{margin-top:16px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.6}
-.hours{border-collapse:collapse;margin-top:30px;min-width:min(420px,100%)}.hours th,.hours td{text-align:left;padding:11px 0;border-bottom:1px solid #3a2a1e;font-weight:400}.hours th{opacity:.7;padding-right:40px}
-.visit{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(30px,6vw,90px);align-items:end}@media(max-width:820px){.visit{grid-template-columns:1fr}}
-.cta{display:inline-flex;align-items:center;gap:18px;margin-top:34px;padding:20px 30px;border-radius:999px;background:#c9a24a;color:#140d09;text-decoration:none;position:relative;overflow:hidden;box-shadow:0 0 40px #c9a24a55;transition:transform .2s}
-.cta span{font-size:12px;letter-spacing:.24em;text-transform:uppercase;padding-right:18px;border-right:1px solid currentColor}.cta b{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(22px,2.6vw,32px)}
-.cta::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);transition:transform .8s}.cta:hover::after{transform:translateX(120%)}.cta:active{transform:translateY(2px)}
-.addr{font-size:clamp(20px,2.2vw,28px);line-height:1.35;margin-top:22px}.addr a{font-size:14px;letter-spacing:.14em;text-transform:uppercase;display:inline-block;margin-top:14px}
-footer{padding:40px clamp(20px,6vw,90px);border-top:1px solid #3a2a1e;font-size:13px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;opacity:.8}
-footer svg{width:18px;height:18px;vertical-align:middle;fill:currentColor}
-.beat h1,.beat h2,.big{font-weight:700}
-@media (prefers-reduced-motion: reduce){.section .wrap>*{opacity:1;transform:none;transition:none}}
+.fcta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 26px;border-radius:3px;background:var(--au);color:#140d09;text-decoration:none;font-weight:600;font-size:16px}
+.btn.ghost{background:transparent;color:var(--au2);border:1px solid var(--au)}
+.sample{position:absolute;right:clamp(14px,3vw,32px);bottom:clamp(14px,3vh,28px);font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.62);z-index:6;max-width:60vw;text-align:right}
+@media(max-width:640px){.sample{bottom:auto;top:76px;right:16px}}
+/* after film: "family ledger" — numbered chapters on a gold spine + design-cut gallery */
+.ledger{max-width:1180px;margin:0 auto;padding:clamp(60px,9vw,130px) clamp(18px,5vw,60px);position:relative}
+.ledger::before{content:"";position:absolute;left:clamp(30px,8vw,120px);top:0;bottom:0;width:1px;background:linear-gradient(var(--au),transparent)}
+.ch-row{display:grid;grid-template-columns:clamp(60px,12vw,170px) 1fr;gap:clamp(18px,4vw,50px);padding:clamp(40px,6vw,80px) 0;border-bottom:1px solid var(--line)}
+@media(max-width:640px){.ch-row{grid-template-columns:1fr;gap:6px}.ledger::before{display:none}}
+.num{font-family:var(--disp);font-style:italic;font-size:clamp(36px,6vw,80px);color:var(--au);line-height:1;position:relative;z-index:1;background:var(--bg);justify-self:start;padding-right:10px}
+.rv-in{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}.section.in .rv-in{opacity:1;transform:none}
+.h{font-family:var(--disp);font-size:clamp(38px,6vw,84px);line-height:1}.h i{font-weight:400;color:var(--au2)}
+.lede{font-size:clamp(17px,1.5vw,21px);line-height:1.6;max-width:54ch;margin-top:22px;opacity:.88}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}@media(max-width:700px){.gal{grid-template-columns:1fr 1fr}.gal figure:last-child{grid-column:span 2}}
+.gal figure{position:relative;overflow:hidden;border:1px solid var(--line)}.gal img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;display:block;filter:saturate(1.05)}
+.gal figcaption{position:absolute;left:10px;bottom:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:#140d09cc;padding:5px 9px;color:var(--au2)}
+.note{font-size:12px;opacity:.55;margin-top:12px}
+.kids{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(20px,4vw,50px);margin-top:30px;align-items:center}@media(max-width:760px){.kids{grid-template-columns:1fr}}
+.kids ul{list-style:none;border:1px solid var(--line);background:var(--card)}.kids li{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px}.kids li:last-child{border:0}.kids li span{opacity:.6;font-size:14px}
+.quotes{display:grid;gap:28px;margin-top:34px}
+.quotes blockquote{font-family:var(--disp);font-style:italic;font-size:clamp(20px,2.2vw,30px);line-height:1.35;border-left:2px solid var(--au);padding-left:22px}
+.quotes cite{display:block;margin-top:10px;font-family:'Inter';font-style:normal;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--au2)}
+.book{margin-top:30px;border:1px solid var(--au);padding:clamp(24px,4vw,44px);background:linear-gradient(135deg,#2a1c10,#140d09)}
+.book .addr{font-size:clamp(20px,2.2vw,28px);line-height:1.35;margin-top:10px}.book small{display:block;margin-top:16px;opacity:.6;font-size:13px}
+footer{padding:40px clamp(20px,6vw,90px) 110px;border-top:1px solid var(--line);font-size:13px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;opacity:.75}
+.sticky{display:none}
+@media(max-width:760px){.sticky{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30;gap:8px;transform:translateY(140%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}.sticky.on{transform:none}
+.sticky a{flex:1;text-align:center;padding:16px 10px;border-radius:3px;font-weight:600;text-decoration:none;background:var(--au);color:#140d09;box-shadow:0 10px 30px rgba(0,0,0,.5)}.sticky a.s{flex:.7;background:#1c130d;color:var(--au2);border:1px solid var(--au)}}
+@media (prefers-reduced-motion: reduce){.rv-in{opacity:1;transform:none;transition:none}}
 </style></head><body>
-<header class="site-header"><a class="brand" href="#top">Legacy Cutz</a><nav><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav></header>
+<header class="site-header"><a class="brand" href="#top">Legacy <i>Cutz</i></a><nav><a href="#designs">Designs</a><a href="#kids">Kids</a><a href="#book">Book</a><a class="hc" href="tel:+17739910618">Call to book</a></nav></header>
 <main id="top">
-<section class="film" aria-label="Legacy Cutz"><div class="stage"><canvas role="img" aria-label="Legacy Cutz"></canvas><noscript><img src="poster.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></noscript><div class="vig"></div><div class="loadbar"><i></i></div><div class="grain"></div>
-<div class="beat" data-in="-0.1" data-peak="0" data-out="0.25" style="left:7vw;bottom:15vh"><span class="k">332 E 95th St &middot; Chicago</span><h1 data-split>Legacy Cutz</h1><p><i>4.9 stars, 53 Google reviews.</i></p></div>
-<div class="beat" data-in="0.3" data-peak="0.44" data-out="0.6" style="right:7vw;top:30vh;text-align:right"><h2><i>Old-school</i><br>salon.</h2><p style="margin-left:auto">Young professionals behind the chair.</p></div>
-<div class="beat" data-in="0.68" data-peak="0.82" data-out="2" style="left:7vw;bottom:16vh"><h2>Designs.<br><i>Cuts.</i> Care.</h2><p>For you, and for the kids.</p></div>
+<section class="film" aria-label="Legacy Cutz film"><div class="stage"><canvas role="img" aria-label="The camera pushes from a glowing 95th Street storefront into the shop, to a child's chair, and down to a design line being cut and brushed clean"></canvas><noscript><img src="poster.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></noscript><div class="vig"></div><div class="loadbar"><i></i></div><div class="grain"></div>
+<div class="beat" data-in="-0.1" data-peak="0" data-out="0.16" style="left:6vw;bottom:14vh"><span class="k">332 E 95th St &middot; Chicago</span><h1 data-split>Legacy Cutz</h1><span class="stars"><b>4.9</b> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; 53 Google reviews</span></div>
+<div class="beat" data-in="0.22" data-peak="0.31" data-out="0.42" style="right:6vw;top:28vh;text-align:right"><span class="k">Two chairs</span><h2>Pass it<br><i>down.</i></h2><p style="margin-left:auto">The cut you got as a kid, now for yours.</p></div>
+<div class="beat" data-in="0.48" data-peak="0.57" data-out="0.66" style="left:6vw;top:28vh"><span class="k">Kids welcome</span><h2>Their first<br><i>real cut.</i></h2><p>Barbers who take their time, so little ones sit easy.</p></div>
+<div class="beat" data-in="0.68" data-peak="0.75" data-out="0.83" style="right:6vw;bottom:18vh;text-align:right"><span class="k">Design cuts</span><h2>Drawn by<br><i>hand.</i></h2></div>
+<div class="beat" data-in="0.84" data-peak="0.9" data-out="2" style="left:6vw;bottom:14vh"><span class="k">Call to book</span><h2>Your seat<br><i>is waiting.</i></h2><div class="fcta"><a class="btn" href="tel:+17739910618">Call (773) 991-0618</a><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=332+E+95th+St+Chicago+IL+60619" target="_blank" rel="noopener">Directions</a></div></div>
+<p class="sample">Sample film &middot; we&rsquo;d reshoot your real shop</p>
 <div class="seam"></div></div></section>
-<section class="section"><div class="wrap" style="text-align:center"><span class="lab">On 95th Street</span><h2 class="big"><i style="font-weight:400">Everyone</i><br>speaks.</h2><p class="lede" style="margin:26px auto 0">That's how one regular describes walking into Legacy Cutz: eye contact, a warm smile, good music and barbers who take their time.</p></div></section>
-<section class="section" id="reviews"><div class="wrap"><span class="lab">From Google reviews</span><h2 class="big"><i style='font-weight:400'>Said</i><br>best.</h2><div class="rvs"><figure class="rv"><blockquote>&ldquo;This is a great barbershop to go to. They have wonderful customer service and great barber&#x27;s who take their time on your hair.&rdquo;</blockquote><figcaption>Google review &middot; Mar 2022</figcaption></figure><figure class="rv"><blockquote>&ldquo;Johnnie is the best barber in the city of Chicago and the world. He does dope design and cuts.&rdquo;</blockquote><figcaption>Google review &middot; May 2021</figcaption></figure><figure class="rv"><blockquote>&ldquo;Kiana has been my son&#x27;s Barbara lol for a while. I&#x27;m never disappointed&rdquo;</blockquote><figcaption>Google review &middot; Mar 2024</figcaption></figure></div></div></section>
-<section class="section" id="visit"><div class="wrap visit"><div><span class="lab">Visit</span><h2 class="big">Come<br><i style='font-weight:400'>through.</i></h2><p class="addr">332 E 95th St, Chicago, IL 60619<br><a href="https://www.google.com/maps/search/?api=1&query=Legacy+Cutz+332+E+95th+St,+Chicago,+IL+60619" target="_blank" rel="noopener">Directions &rarr;</a></p><a class="cta" href="tel:+17739910618"><span>Call</span><b>(773) 991-0618</b></a></div>
-<div></div></div></section>
+
+<div class="ledger">
+<section class="ch-row section" id="designs"><span class="num">i.</span><div class="rv-in">
+<span class="k">The work</span><h2 class="h">Design cuts,<br><i>line by line.</i></h2>
+<p class="lede">Curves, parts and patterns cut freehand with a trimmer, then brushed clean. One regular calls their barber&rsquo;s designs &ldquo;dope&rdquo;. Bring a photo, or let the chair decide.</p>
+<div class="gal"><figure><img src="img/g400.jpg" alt="Trimmer etching a curved design line" loading="lazy" width="640" height="640"><figcaption>The line</figcaption></figure><figure><img src="img/g470.jpg" alt="Brushing a design cut clean" loading="lazy" width="640" height="640"><figcaption>The brush</figcaption></figure><figure><img src="img/g560.jpg" alt="Finished curved design" loading="lazy" width="640" height="640"><figcaption>The finish</figcaption></figure></div>
+<p class="note">Sample images &middot; we&rsquo;d swap in the shop&rsquo;s own best designs</p>
+</div></section>
+
+<section class="ch-row section" id="kids"><span class="num">ii.</span><div class="rv-in">
+<span class="k">For the family</span><h2 class="h">Kids&rsquo; cuts,<br><i>no rush.</i></h2>
+<div class="kids"><p class="lede" style="margin:0">One mom says her son&rsquo;s barber has had him &ldquo;for a while&rdquo; and she&rsquo;s &ldquo;never disappointed&rdquo;. A patient chair makes a first cut easy.</p>
+<ul><li>Kids&rsquo; cut<span>call for price</span></li><li>Fade &amp; line-up<span>call for price</span></li><li>Design add-on<span>call for price</span></li></ul></div>
+</div></section>
+
+<section class="ch-row section" id="word"><span class="num">iii.</span><div class="rv-in">
+<span class="k">From Google reviews</span><h2 class="h">Said <i>best.</i></h2>
+<div class="quotes"><blockquote>&ldquo;They have wonderful customer service and great barbers who take their time on your hair.&rdquo;<cite>Google review &middot; Mar 2022</cite></blockquote>
+<blockquote>&ldquo;He does dope design and cuts.&rdquo;<cite>Google review &middot; May 2021</cite></blockquote>
+<blockquote>&ldquo;Has been my son&rsquo;s barber for a while. I&rsquo;m never disappointed.&rdquo;<cite>Google review &middot; Mar 2024</cite></blockquote></div>
+</div></section>
+
+<section class="ch-row section" id="book" style="border:0"><span class="num">iv.</span><div class="rv-in">
+<span class="k">Book</span><h2 class="h">Call ahead,<br><i>come through.</i></h2>
+<div class="book"><p class="addr">332 E 95th St<br>Chicago, IL 60619</p><div class="fcta"><a class="btn" href="tel:+17739910618">Call to book &middot; (773) 991-0618</a><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=332+E+95th+St+Chicago+IL+60619" target="_blank" rel="noopener">Directions</a></div><small>Hours aren&rsquo;t listed yet. Call to check today&rsquo;s times and book a chair.</small></div>
+</div></section>
+</div>
 </main>
-<footer><span>&copy; Legacy Cutz &middot; 332 E 95th St, Chicago, IL 60619</span><span><a href="https://facebook.com/101513031966855" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg></a> &nbsp; Preview built by Richard Sanches</span></footer>
-<script>window.FILM={frames:288,poster:"poster.jpg",seam:"#16161c",bg:"#140d09",light:false};</script>
+<footer><span>&copy; Legacy Cutz &middot; 332 E 95th St, Chicago</span><span>Preview built by Richard Sanches &middot; film is a generated sample</span></footer>
+<div class="sticky" id="sticky"><a href="tel:+17739910618">Call to book</a><a class="s" href="https://www.google.com/maps/search/?api=1&query=332+E+95th+St+Chicago+IL+60619" target="_blank" rel="noopener">Directions</a></div>
+<script>window.FILM={landscape:{dir:"frames",frames:600,poster:"poster.jpg",seam:"#543526"},portrait:{dir:"frames-m",frames:600,poster:"poster-m.jpg",seam:"#060203"},bg:"#140d09",light:false};
+addEventListener('scroll',()=>{const f=document.querySelector('.film'),r=f.getBoundingClientRect(),p=-r.top/Math.max(1,r.height-innerHeight);document.getElementById('sticky').classList.toggle('on',scrollY>innerHeight*.6&&!(p>.82&&p<1.02));},{passive:true});</script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-<script src="../js/film.js"></script></body></html>
+<script src="../js/film-wt.js"></script></body></html>
