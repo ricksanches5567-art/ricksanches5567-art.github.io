@@ -1,62 +1,106 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>West Town Auto Repair &middot; West Town, Chicago</title><meta name="description" content="Honest auto repair at 2424 W North Ave, Chicago. Brakes, maintenance, body repair. Open 7 days.">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>West Town Auto Repair &middot; 2424 W North Ave, Chicago</title>
+<meta name="description" content="West Town Auto Repair, 2424 W North Ave, Chicago. Rated 5.0 from 111 Google reviews. Brakes, diagnostics and maintenance, explained plainly. Open 7 days.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><rect width='10' height='10' fill='%23ff7a1a'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}html{background:#0e1113}body{font-family:'Archivo',sans-serif;color:#e9ecee;background:#0e1113;-webkit-font-smoothing:antialiased}
+:root{--bg:#0e1113;--ink:#e9ecee;--or:#ff7a1a;--line:#2a3035;--card:#151a1d;--mono:'JetBrains Mono',ui-monospace,monospace;--disp:'Archivo Black',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{background:var(--bg)}body{font-family:'Archivo',sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
 a{color:inherit}
 .site-header{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,4vw,48px);color:#fff;transition:color .3s}
 .site-header::before{content:"";position:absolute;inset:0 0 auto 0;height:180%;z-index:-1;background:linear-gradient(to bottom,rgba(6,4,3,.62),rgba(6,4,3,0));transition:opacity .3s}
 .site-header.on-light{color:#111}.site-header.on-light::before{opacity:.15}
-.brand{font-family:'Archivo Black',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;text-decoration:none;text-shadow:0 1px 22px rgba(0,0,0,.55)}
-.site-header nav a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;margin-left:22px;text-shadow:0 1px 22px rgba(0,0,0,.55)}
-.film{height:440vh;position:relative}.stage{position:sticky;top:0;height:100vh;overflow:hidden}
-.stage canvas{width:100%;height:100%;display:block;background:#0e1113 url(poster.jpg) center/cover no-repeat}
-.loadbar{position:absolute;left:0;right:0;bottom:0;height:2px;z-index:5;transition:opacity .6s}.loadbar i{display:block;height:100%;background:#ff7a1a;transform:scaleX(0);transform-origin:0 50%;transition:transform .2s}.loaded .loadbar{opacity:0}
-.grain{position:absolute;inset:0;pointer-events:none;opacity:.10;background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.brand{font-family:var(--disp);font-size:clamp(15px,2vw,20px);text-transform:uppercase;text-decoration:none;text-shadow:0 1px 22px rgba(0,0,0,.55)}
+.site-header nav a{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;margin-left:22px;text-shadow:0 1px 22px rgba(0,0,0,.55)}
+.site-header nav .hc{border:1px solid currentColor;padding:8px 14px;border-radius:2px}
+@media(max-width:640px){.site-header nav a:not(.hc){display:none}}
+.film{height:900vh;position:relative}.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.stage canvas{width:100%;height:100%;display:block;background:var(--bg) url(poster.jpg) center/cover no-repeat}
+@media (orientation:portrait) and (max-width:900px){.stage canvas{background-image:url(poster-m.jpg)}}
+.loadbar{position:absolute;left:0;right:0;bottom:0;height:2px;z-index:5;transition:opacity .6s}.loadbar i{display:block;height:100%;background:var(--or);transform:scaleX(0);transform-origin:0 50%;transition:transform .2s}.loaded .loadbar{opacity:0}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.09;background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
 .vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.55))}
-.seam{position:absolute;inset:0;background:#0e1113;opacity:0;pointer-events:none}
-.beat{position:absolute;color:#fff;opacity:0;will-change:opacity,transform;max-width:min(640px,86vw)}
-.beat::before{content:"";position:absolute;z-index:-1;inset:-70% -24% -70% -14%;background:radial-gradient(60% 58% at 22% 50%,rgba(6,3,1,.72),rgba(6,3,1,.42) 45%,transparent 78%)}
-.beat h1,.beat h2{font-family:'Archivo Black',sans-serif;font-weight:400;line-height:.95;text-shadow:0 2px 30px rgba(0,0,0,.5)}
-.beat h1{font-size:clamp(46px,9vw,132px)}.beat h2{font-size:clamp(34px,5.6vw,84px)}.beat p{margin-top:14px;font-size:clamp(15px,1.4vw,19px);line-height:1.5;max-width:34ch}
-.beat .k{font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.85;margin-bottom:14px;display:block}
+.seam{position:absolute;inset:0;background:var(--bg);opacity:0;pointer-events:none}
+.beat{position:absolute;color:#fff;opacity:0;will-change:opacity,transform;max-width:min(640px,88vw)}
+.beat::before{content:"";position:absolute;z-index:-1;inset:-70% -24% -70% -14%;background:radial-gradient(60% 58% at 22% 50%,rgba(6,3,1,.74),rgba(6,3,1,.42) 45%,transparent 78%)}
+.beat h1,.beat h2{font-family:var(--disp);font-weight:400;line-height:.92;text-transform:uppercase;letter-spacing:-.02em;text-shadow:0 2px 30px rgba(0,0,0,.5)}
+.beat h1{font-size:clamp(48px,9vw,132px)}.beat h2{font-size:clamp(34px,5.4vw,80px)}.beat p{margin-top:14px;font-size:clamp(15px,1.4vw,19px);line-height:1.5;max-width:36ch}
+.k{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;opacity:.9;margin-bottom:14px;display:block}
+.stars{font-family:var(--mono);display:inline-flex;gap:10px;align-items:center;margin-top:18px;padding:8px 14px;border:1px solid rgba(255,255,255,.35);border-radius:2px;font-size:14px}.stars b{color:var(--or);font-size:18px}
 .ch{display:inline-block}
-.section{min-height:min(92vh,900px);display:flex;align-items:center;padding:clamp(60px,9vw,130px) clamp(20px,6vw,90px)}
-.section .wrap{width:100%;max-width:1180px;margin:0 auto}
-.section .wrap>*{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-.section.in .wrap>*{opacity:1;transform:none}.section.in .wrap>*:nth-child(2){transition-delay:.09s}.section.in .wrap>*:nth-child(3){transition-delay:.18s}.section.in .wrap>*:nth-child(4){transition-delay:.27s}
-.big{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:clamp(48px,9vw,150px);line-height:.92;letter-spacing:-.01em}
-.lab{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#ff7a1a;margin-bottom:20px;display:block}
-.lede{font-size:clamp(17px,1.6vw,22px);line-height:1.55;max-width:52ch;margin-top:26px;opacity:.88}
-.rvs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:40px}
-.rv{padding:28px;border:1px solid #2a3035;border-radius:4px;background:#151a1d}.rv blockquote{font-size:17px;line-height:1.55}.rv figcaption{margin-top:16px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.6}
-.hours{border-collapse:collapse;margin-top:30px;min-width:min(420px,100%)}.hours th,.hours td{text-align:left;padding:11px 0;border-bottom:1px solid #2a3035;font-weight:400}.hours th{opacity:.7;padding-right:40px}
-.visit{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(30px,6vw,90px);align-items:end}@media(max-width:820px){.visit{grid-template-columns:1fr}}
-.cta{display:inline-flex;align-items:center;gap:18px;margin-top:34px;padding:20px 30px;border-radius:999px;background:#ff7a1a;color:#140800;text-decoration:none;position:relative;overflow:hidden;box-shadow:0 0 40px #ff7a1a55;transition:transform .2s}
-.cta span{font-size:12px;letter-spacing:.24em;text-transform:uppercase;padding-right:18px;border-right:1px solid currentColor}.cta b{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:clamp(22px,2.6vw,32px)}
-.cta::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);transition:transform .8s}.cta:hover::after{transform:translateX(120%)}.cta:active{transform:translateY(2px)}
-.addr{font-size:clamp(20px,2.2vw,28px);line-height:1.35;margin-top:22px}.addr a{font-size:14px;letter-spacing:.14em;text-transform:uppercase;display:inline-block;margin-top:14px}
-footer{padding:40px clamp(20px,6vw,90px);border-top:1px solid #2a3035;font-size:13px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;opacity:.8}
+.fcta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 24px;border-radius:2px;background:var(--or);color:#140800;text-decoration:none;font-weight:600;font-size:16px;box-shadow:0 0 40px #ff7a1a55}
+.btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6);box-shadow:none}
+.sample{position:absolute;right:clamp(14px,3vw,32px);bottom:clamp(14px,3vh,28px);font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.62);z-index:6;max-width:60vw;text-align:right}
+@media(max-width:640px){.sample{bottom:auto;top:66px;right:16px}}
+/* after film: repair-order ticket layout */
+.ro{padding:clamp(70px,10vw,140px) clamp(18px,6vw,90px)}
+.ro .wrap{max-width:1180px;margin:0 auto}
+.rv-in{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}.section.in .rv-in{opacity:1;transform:none}
+.ticket{display:grid;grid-template-columns:1fr 1.3fr;border:1px solid var(--line);background:var(--card)}
+@media(max-width:860px){.ticket{grid-template-columns:1fr}}
+.ticket .hd{padding:clamp(28px,4vw,56px);border-right:1px dashed var(--line)}
+@media(max-width:860px){.ticket .hd{border-right:0;border-bottom:1px dashed var(--line)}}
+.no{font-family:var(--mono);font-size:12px;color:var(--or);letter-spacing:.18em;text-transform:uppercase}
+.big{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:clamp(42px,7vw,104px);line-height:.92;letter-spacing:-.02em;margin-top:18px}
+.lede{font-size:clamp(16px,1.5vw,20px);line-height:1.55;max-width:46ch;margin-top:22px;opacity:.86}
+.lines{list-style:none;font-family:var(--mono)}
+.lines li{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:baseline;padding:20px clamp(20px,3vw,40px);border-bottom:1px solid var(--line);font-size:15px}
+.lines li:last-child{border-bottom:0}.lines .n{color:var(--or)}.lines b{font-family:'Archivo',sans-serif;font-size:clamp(17px,1.6vw,21px);font-weight:600}.lines small{display:block;opacity:.6;margin-top:4px;font-size:13px;font-family:'Archivo',sans-serif}.lines .t{opacity:.55;font-size:12px;text-transform:uppercase;letter-spacing:.1em}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:clamp(50px,7vw,90px);border-top:2px solid var(--or)}
+@media(max-width:760px){.how{grid-template-columns:1fr}}
+.how div{padding:28px 24px 10px 0}.how .no{display:block;margin-bottom:10px}.how h3{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:24px}.how p{margin-top:10px;line-height:1.55;opacity:.8}
+.quotes{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;margin-top:40px}
+.quotes figure{flex:0 0 min(420px,84vw);scroll-snap-align:start;border-left:3px solid var(--or);padding:6px 0 6px 22px}
+.quotes blockquote{font-size:clamp(18px,1.8vw,23px);line-height:1.45}.quotes figcaption{font-family:var(--mono);margin-top:14px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.6}
+.visit{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(30px,6vw,90px);align-items:start;margin-top:10px}@media(max-width:820px){.visit{grid-template-columns:1fr}}
+.addr{font-size:clamp(20px,2.2vw,28px);line-height:1.35;margin-top:22px}.addr a{font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;display:inline-block;margin-top:14px}
+.hours{border-collapse:collapse;width:100%;font-family:var(--mono)}.hours th,.hours td{text-align:left;padding:12px 0;border-bottom:1px solid var(--line);font-weight:400;font-size:15px}.hours th{opacity:.65;padding-right:40px}
+footer{padding:40px clamp(20px,6vw,90px) 110px;border-top:1px solid var(--line);font-size:13px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;opacity:.75}
 footer svg{width:18px;height:18px;vertical-align:middle;fill:currentColor}
-.beat h1,.beat h2{text-transform:uppercase;letter-spacing:-.02em}.big{text-transform:uppercase}.rv p{opacity:.7;margin-top:6px}
-@media (prefers-reduced-motion: reduce){.section .wrap>*{opacity:1;transform:none;transition:none}}
+.sticky{display:none}
+@media(max-width:760px){.sticky{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30;gap:8px;transform:translateY(140%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}.sticky.on{transform:none}
+.sticky a{flex:1;text-align:center;padding:16px 10px;border-radius:2px;font-weight:600;text-decoration:none;background:var(--or);color:#140800;box-shadow:0 10px 30px rgba(0,0,0,.5)}.sticky a.s{flex:.6;background:#1b2125;color:#fff;border:1px solid var(--line)}}
+@media (prefers-reduced-motion: reduce){.rv-in{opacity:1;transform:none;transition:none}}
 </style></head><body>
-<header class="site-header"><a class="brand" href="#top">West Town Auto Repair</a><nav><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav></header>
+<header class="site-header"><a class="brand" href="#top">West Town Auto Repair</a><nav><a href="#fix">What we fix</a><a href="#visit">Visit</a><a class="hc" href="tel:+17737998398">Call</a></nav></header>
 <main id="top">
-<section class="film" aria-label="West Town Auto Repair"><div class="stage"><canvas role="img" aria-label="West Town Auto Repair"></canvas><noscript><img src="poster.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></noscript><div class="vig"></div><div class="loadbar"><i></i></div><div class="grain"></div>
-<div class="beat" data-in="-0.1" data-peak="0" data-out="0.24" style="left:6vw;bottom:14vh"><span class="k">2424 W North Ave &middot; Chicago</span><h1 data-split>Fixed right.</h1><p>West Town Auto Repair. Five stars from 111 Google reviews.</p></div>
-<div class="beat" data-in="0.3" data-peak="0.42" data-out="0.6" style="right:6vw;top:30vh;text-align:right"><h2>Brakes. Leaks.<br>Bumpers.</h2><p style="margin-left:auto">Explained plainly, priced fairly, no unnecessary repairs.</p></div>
-<div class="beat" data-in="0.68" data-peak="0.82" data-out="2" style="left:6vw;bottom:16vh"><h2>Back on<br>North Ave.</h2><p>Open seven days. Call before you stop by.</p></div>
+<section class="film" aria-label="West Town Auto Repair film"><div class="stage"><canvas role="img" aria-label="A car arrives at night, gets its brakes diagnosed and fixed, and drives out into daylight"></canvas><noscript><img src="poster.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></noscript><div class="vig"></div><div class="loadbar"><i></i></div><div class="grain"></div>
+<div class="beat" data-in="-0.1" data-peak="0" data-out="0.16" style="left:6vw;bottom:14vh"><span class="k">2424 W North Ave &middot; Chicago</span><h1 data-split>Fixed right.</h1><span class="stars"><b>5.0</b> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; 111 Google reviews</span></div>
+<div class="beat" data-in="0.24" data-peak="0.33" data-out="0.44" style="right:6vw;top:26vh;text-align:right"><span class="k">Step 1 &middot; Find it</span><h2>We find<br>the real problem.</h2></div>
+<div class="beat" data-in="0.48" data-peak="0.57" data-out="0.66" style="left:6vw;top:24vh"><span class="k">Step 2 &middot; Show you</span><h2>Then we<br>show you.</h2><p>The worn part in hand, explained plainly, priced before we start.</p></div>
+<div class="beat" data-in="0.68" data-peak="0.75" data-out="0.83" style="right:6vw;bottom:18vh;text-align:right"><span class="k">Step 3 &middot; Fix it</span><h2>Fixed<br>right.</h2><p style="margin-left:auto">No unnecessary repairs.</p></div>
+<div class="beat" data-in="0.84" data-peak="0.9" data-out="2" style="left:6vw;bottom:14vh"><span class="k">Open 7 days</span><h2>Back on<br>North Ave.</h2><div class="fcta"><a class="btn" href="tel:+17737998398">Call (773) 799-8398</a><a class="btn ghost" href="sms:+17737998398?&body=Hi%2C%20I%27d%20like%20a%20quote%20for%20my%20car%3A%20">Text for a quote</a></div></div>
+<p class="sample">Sample film &middot; we&rsquo;d reshoot your real shop</p>
 <div class="seam"></div></div></section>
-<section class="section"><div class="wrap"><span class="lab">The shop</span><h2 class="big">Honest<br>work.</h2><p class="lede">Customers write about the same things again and again: the problem explained clearly, fair and transparent pricing, updates during the repair, and a ride home when they needed one.</p>
-<div class="rvs"><div class="rv"><b style="font-family:Archivo Black;font-size:46px;color:#ff7a1a">5.0</b><p>Google rating, 111 reviews</p></div><div class="rv"><b style="font-family:Archivo Black;font-size:46px;color:#ff7a1a">7</b><p>Days a week</p></div><div class="rv"><b style="font-family:Archivo Black;font-size:46px;color:#ff7a1a">8&ndash;7</b><p>Mon&ndash;Sat hours</p></div></div></div></section>
-<section class="section" id="reviews"><div class="wrap"><span class="lab">From Google reviews</span><h2 class="big">In their<br>words.</h2><div class="rvs"><figure class="rv"><blockquote>&ldquo;Gunes at West Town Auto Repair was honest and genuinely kind from the very first meeting... The pricing was fair and transparent, which made me feel comfortable right away.&rdquo;</blockquote><figcaption>Google review &middot; Jan 2026</figcaption></figure><figure class="rv"><blockquote>&ldquo;Great customer service and great work on my vehicle. Did work fast and didn&#x27;t waste anytime fixing my vehicle. 10/10 recommend.&rdquo;</blockquote><figcaption>Google review &middot; Feb 2026</figcaption></figure><figure class="rv"><blockquote>&ldquo;I own a small car rental business and I&#x27;ve brought in 2 of my cars here... They are so quick, efficient, and extremely polite.&rdquo;</blockquote><figcaption>Google review &middot; Jan 2026</figcaption></figure></div></div></section>
-<section class="section" id="visit"><div class="wrap visit"><div><span class="lab">Visit</span><h2 class="big">Bring it<br>in.</h2><p class="addr">2424 W North Ave, Chicago, IL 60647<br><a href="https://www.google.com/maps/search/?api=1&query=West+Town+Auto+Repair+2424+W+North+Ave,+Chicago,+IL+60647" target="_blank" rel="noopener">Directions &rarr;</a></p><a class="cta" href="tel:+17737998398"><span>Call</span><b>(773) 799-8398</b></a></div>
-<div><table class="hours"><tr><th>Mon</th><td>8 AM–7 PM</td></tr><tr><th>Tue</th><td>8 AM–7 PM</td></tr><tr><th>Wed</th><td>8 AM–7 PM</td></tr><tr><th>Thu</th><td>8 AM–7 PM</td></tr><tr><th>Fri</th><td>8 AM–7 PM</td></tr><tr><th>Sat</th><td>8 AM–7 PM</td></tr><tr><th>Sun</th><td>10 AM–4 PM</td></tr></table></div></div></section>
+
+<section class="section ro" id="fix"><div class="wrap">
+<div class="ticket rv-in"><div class="hd"><span class="no">Repair order &middot; West Town</span><h2 class="big">What<br>we fix.</h2><p class="lede">Customers write about the same things again and again: the problem explained clearly, fair and transparent pricing, and updates during the repair.</p></div>
+<ol class="lines">
+<li><span class="n">01</span><span><b>Brakes</b><small>Pads, rotors, calipers, noise and pull</small></span><span class="t">Common</span></li>
+<li><span class="n">02</span><span><b>Check-engine diagnostics</b><small>We find the cause before we quote</small></span><span class="t">Diagnose</span></li>
+<li><span class="n">03</span><span><b>Oil &amp; maintenance</b><small>Scheduled service, fluids, filters</small></span><span class="t">Routine</span></li>
+<li><span class="n">04</span><span><b>Leaks</b><small>Oil, coolant and fluid leaks traced</small></span><span class="t">Repair</span></li>
+<li><span class="n">05</span><span><b>Suspension &amp; steering</b><small>Clunks, shakes and alignment issues</small></span><span class="t">Repair</span></li>
+</ol></div>
+<div class="how rv-in"><div><span class="no">01 / Find</span><h3>Real diagnosis</h3><p>We look before we guess, so you pay for the problem you actually have.</p></div><div><span class="no">02 / Show</span><h3>Straight quote</h3><p>We show you the part and the price, and nothing starts until you say yes.</p></div><div><span class="no">03 / Fix</span><h3>Done right</h3><p>Updates while we work, and your car back when we said.</p></div></div>
+</div></section>
+
+<section class="section ro" id="reviews" style="padding-top:0"><div class="wrap rv-in"><span class="no">From Google reviews &middot; 5.0 / 111</span><h2 class="big">In their words.</h2>
+<div class="quotes">
+<figure><blockquote>&ldquo;Gunes at West Town Auto Repair was honest and genuinely kind from the very first meeting... The pricing was fair and transparent.&rdquo;</blockquote><figcaption>Google review</figcaption></figure>
+<figure><blockquote>&ldquo;Great customer service and great work on my vehicle. Did work fast and didn&rsquo;t waste anytime fixing my vehicle. 10/10 recommend.&rdquo;</blockquote><figcaption>Google review</figcaption></figure>
+<figure><blockquote>&ldquo;I own a small car rental business and I&rsquo;ve brought in 2 of my cars here... They are so quick, efficient, and extremely polite.&rdquo;</blockquote><figcaption>Google review</figcaption></figure>
+</div></div></section>
+
+<section class="section ro" id="visit" style="padding-top:0"><div class="wrap visit rv-in"><div><span class="no">Visit &middot; Open 7 days</span><h2 class="big">Bring it in.</h2><p class="addr">2424 W North Ave, Chicago, IL 60647<br><a href="https://www.google.com/maps/search/?api=1&query=West+Town+Auto+Repair+2424+W+North+Ave+Chicago" target="_blank" rel="noopener">Directions &rarr;</a></p><div class="fcta"><a class="btn" href="tel:+17737998398">Call (773) 799-8398</a><a class="btn ghost" href="sms:+17737998398?&body=Hi%2C%20I%27d%20like%20a%20quote%20for%20my%20car%3A%20">Text for a quote</a></div></div>
+<table class="hours"><tr><th>Mon&ndash;Sat</th><td>8 AM &ndash; 7 PM</td></tr><tr><th>Sunday</th><td>10 AM &ndash; 4 PM</td></tr></table></div></section>
 </main>
-<footer><span>&copy; West Town Auto Repair &middot; 2424 W North Ave, Chicago, IL 60647</span><span><a href="https://facebook.com/781279751743802" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg></a> &nbsp; Preview built by Richard Sanches</span></footer>
-<script>window.FILM={frames:288,poster:"poster.jpg",seam:"#4d392c",bg:"#0e1113",light:false};</script>
+<footer><span>&copy; West Town Auto Repair &middot; 2424 W North Ave, Chicago</span><span><a href="https://facebook.com/781279751743802" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.020 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.890v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg></a> &nbsp; Preview built by Richard Sanches &middot; film is a generated sample</span></footer>
+<div class="sticky" id="sticky"><a href="tel:+17737998398">Call (773) 799-8398</a><a class="s" href="sms:+17737998398?&body=Hi%2C%20I%27d%20like%20a%20quote%3A%20">Text</a></div>
+<script>window.FILM={landscape:{dir:"frames",frames:600,poster:"poster.jpg",seam:"#463931"},portrait:{dir:"frames-m",frames:600,poster:"poster-m.jpg",seam:"#191614"},bg:"#0e1113",light:false};
+addEventListener('scroll',()=>{const f=document.querySelector('.film'),r=f.getBoundingClientRect(),p=-r.top/Math.max(1,r.height-innerHeight);document.getElementById('sticky').classList.toggle('on',scrollY>innerHeight*.6&&!(p>.82&&p<1.02));},{passive:true});
+document.querySelectorAll('.ro').forEach(s=>s.classList.add('section'));</script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-<script src="../js/film.js"></script></body></html>
+<script src="../js/film-wt.js"></script></body></html>
