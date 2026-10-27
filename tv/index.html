@@ -1,0 +1,102 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Taqueria Varitas &middot; 700 E 47th St, Chicago</title>
+<meta name="description" content="Taqueria Varitas, 700 E 47th St, Bronzeville, Chicago. Tacos, burritos and nachos, made fresh to order. Monday to Friday, 11 AM to 8 PM. Rated 4.4 from 463 Google reviews.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><rect width='10' height='10' fill='%23f5b82e'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1a0d06;--sun:#f5b82e;--chili:#d1341e;--teal:#0d4f4f;--ink:#1a0d06;--cream:#fff4dc;--disp:'Anton',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{background:var(--bg)}body{font-family:'DM Sans',sans-serif;color:var(--cream);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.site-header{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,4vw,48px);color:#fff;transition:color .3s}
+.site-header::before{content:"";position:absolute;inset:0 0 auto 0;height:180%;z-index:-1;background:linear-gradient(to bottom,rgba(10,4,0,.7),rgba(10,4,0,0))}
+.brand{font-family:var(--disp);font-size:clamp(18px,2.2vw,24px);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;text-shadow:0 1px 22px rgba(0,0,0,.6)}
+.site-header nav a{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;margin-left:22px;text-shadow:0 1px 22px rgba(0,0,0,.6)}
+.site-header nav .hc{background:var(--sun);color:var(--ink);padding:9px 16px;border-radius:4px;text-shadow:none}
+@media(max-width:640px){.site-header nav a:not(.hc){display:none}}
+.film{height:900vh;position:relative}.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.stage canvas{width:100%;height:100%;display:block;background:var(--bg) url(poster.jpg) center/cover no-repeat}
+@media (orientation:portrait) and (max-width:900px){.stage canvas{background-image:url(poster-m.jpg)}}
+.loadbar{position:absolute;left:0;right:0;bottom:0;height:3px;z-index:5;transition:opacity .6s}.loadbar i{display:block;height:100%;background:var(--sun);transform:scaleX(0);transform-origin:0 50%;transition:transform .2s}.loaded .loadbar{opacity:0}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.08;background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 45%,rgba(10,4,0,.55))}
+.seam{position:absolute;inset:0;background:var(--bg);opacity:0;pointer-events:none}
+.beat{position:absolute;color:#fff;opacity:0;will-change:opacity,transform;max-width:min(660px,88vw)}
+.beat::before{content:"";position:absolute;z-index:-1;inset:-70% -24% -70% -14%;background:radial-gradient(60% 58% at 22% 50%,rgba(12,5,0,.76),rgba(12,5,0,.42) 45%,transparent 78%)}
+.beat h1,.beat h2{font-family:var(--disp);font-weight:400;line-height:.96;text-transform:uppercase;letter-spacing:.01em;text-shadow:0 2px 30px rgba(0,0,0,.55)}
+.beat h1{font-size:clamp(56px,10.5vw,156px)}.beat h2{font-size:clamp(40px,6.2vw,96px)}.beat p{margin-top:14px;font-size:clamp(15px,1.4vw,19px);line-height:1.5;max-width:34ch}
+.k{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sun);margin-bottom:14px;display:block}
+.pill{display:inline-flex;gap:10px;align-items:center;margin-top:18px;padding:9px 16px;border-radius:4px;background:var(--sun);color:var(--ink);font-weight:700;font-size:14px}.pill b{font-family:var(--disp);font-size:22px;font-weight:400}
+.ch{display:inline-block}
+.fcta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 26px;border-radius:4px;background:var(--sun);color:var(--ink);text-decoration:none;font-weight:700;font-size:16px;box-shadow:0 8px 0 #a8791a}
+.btn.red{background:var(--chili);color:#fff;box-shadow:0 8px 0 #8d2010}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7);box-shadow:none}
+.sample{position:absolute;right:clamp(14px,3vw,32px);bottom:clamp(14px,3vh,28px);font-size:11px;letter-spacing:.05em;color:rgba(255,255,255,.7);z-index:6;max-width:60vw;text-align:right}
+@media(max-width:640px){.sample{bottom:auto;top:66px;right:16px}}
+/* after film: three colour blocks - dark statement, sun reviews on tilted stickers, teal order board */
+.blk{padding:clamp(64px,9vw,130px) clamp(18px,6vw,90px)}.blk .wrap{max-width:1200px;margin:0 auto}
+.rv-in{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}.section.in .rv-in{opacity:1;transform:none}
+.stmt{background:var(--bg)}
+.mega{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:clamp(64px,15vw,230px);line-height:.88;color:var(--sun)}
+.mega em{font-style:normal;color:var(--chili)}
+.lede{font-size:clamp(18px,1.8vw,24px);line-height:1.5;max-width:44ch;margin-top:28px;opacity:.9}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}.chips span{font-weight:700;font-size:clamp(14px,1.4vw,18px);padding:10px 18px;border-radius:999px;border:2px solid var(--sun);color:var(--sun);text-transform:uppercase;letter-spacing:.06em}
+.tape{background:var(--chili);color:#fff;overflow:hidden;white-space:nowrap;padding:14px 0;transform:rotate(-1.4deg);margin:-10px -20px 0;position:relative;z-index:2}
+.tape div{display:inline-block;font-family:var(--disp);font-size:clamp(22px,3vw,36px);letter-spacing:.06em;text-transform:uppercase;animation:tape 28s linear infinite}
+@keyframes tape{to{transform:translateX(-50%)}}
+.sunb{background:var(--sun);color:var(--ink)}
+.sunb .big{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:clamp(44px,8vw,120px);line-height:.92}
+.stick{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,36px);margin-top:48px}
+@media(max-width:900px){.stick{grid-template-columns:1fr}}
+.sticker{background:#fff;color:var(--ink);padding:clamp(24px,3vw,36px);border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink);font-size:clamp(17px,1.5vw,20px);line-height:1.5}
+.sticker:nth-child(1){transform:rotate(-1.6deg)}.sticker:nth-child(2){transform:rotate(1.2deg);background:var(--cream)}.sticker:nth-child(3){transform:rotate(-.8deg)}
+.sticker cite{display:block;margin-top:18px;font-style:normal;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--chili)}
+.score{display:flex;align-items:baseline;gap:16px;margin-top:40px;font-weight:700}.score b{font-family:var(--disp);font-weight:400;font-size:clamp(70px,10vw,140px);line-height:.9;color:var(--chili)}
+.tealb{background:var(--teal);color:var(--cream)}
+.order{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(30px,6vw,90px);align-items:start}@media(max-width:860px){.order{grid-template-columns:1fr}}
+.order .big{font-family:var(--disp);font-weight:400;text-transform:uppercase;font-size:clamp(50px,9vw,130px);line-height:.9;color:var(--sun)}
+.order address{font-style:normal;font-size:clamp(20px,2.2vw,28px);line-height:1.4;margin-top:24px}.order address a{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sun)}
+.week{display:grid;grid-template-columns:repeat(5,1fr) 1fr 1fr;gap:6px}
+.week div{background:rgba(255,255,255,.08);border-radius:4px;padding:16px 4px;text-align:center}.week div.off{background:transparent;border:1px dashed rgba(255,244,220,.35);opacity:.6}
+.week b{font-family:var(--disp);font-weight:400;font-size:20px;letter-spacing:.06em;display:block}.week span{font-size:11px;opacity:.85;display:block;margin-top:4px;line-height:1.3}
+@media(max-width:560px){.week{grid-template-columns:repeat(4,1fr)}}
+.hrs{margin-top:22px;font-weight:700;font-size:clamp(18px,1.8vw,22px)}.hrs em{font-style:normal;color:var(--sun)}
+footer{padding:36px clamp(20px,6vw,90px) 110px;font-size:13px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;opacity:.75;background:var(--teal)}
+footer svg{width:18px;height:18px;vertical-align:middle;fill:currentColor}
+.sticky{display:none}
+@media(max-width:760px){.sticky{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30;gap:8px;transform:translateY(140%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}.sticky.on{transform:none}
+.sticky a{flex:1;text-align:center;padding:16px 10px;border-radius:4px;font-weight:700;text-decoration:none;background:var(--sun);color:var(--ink);box-shadow:0 6px 0 #a8791a,0 14px 30px rgba(0,0,0,.4)}.sticky a.s{flex:.6;background:var(--chili);color:#fff;box-shadow:0 6px 0 #8d2010,0 14px 30px rgba(0,0,0,.4)}}
+@media (prefers-reduced-motion: reduce){.rv-in{opacity:1;transform:none;transition:none}.tape div{animation:none}}
+</style></head><body>
+<header class="site-header"><a class="brand" href="#top">Taqueria Varitas</a><nav><a href="#words">Reviews</a><a href="#order">Hours</a><a class="hc" href="tel:+18722443360">Call to order</a></nav></header>
+<main id="top">
+<section class="film" aria-label="Taqueria Varitas film"><div class="stage"><canvas role="img" aria-label="Tortillas on a hot griddle, meat, onion, cilantro, lime and green salsa, ending on a plate of tacos"></canvas><noscript><img src="poster.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></noscript><div class="vig"></div><div class="loadbar"><i></i></div><div class="grain"></div>
+<div class="beat" data-in="-0.1" data-peak="0" data-out="0.16" style="left:6vw;bottom:14vh"><span class="k">700 E 47th St &middot; Bronzeville</span><h1 data-split>Fresh to order.</h1><span class="pill"><b>4.4</b> &#9733; &middot; 463 Google reviews</span></div>
+<div class="beat" data-in="0.24" data-peak="0.33" data-out="0.44" style="right:6vw;top:24vh;text-align:right"><span class="k">Step 1</span><h2>Hot<br>griddle.</h2></div>
+<div class="beat" data-in="0.48" data-peak="0.57" data-out="0.66" style="left:6vw;top:22vh"><span class="k">Step 2</span><h2>Onion,<br>cilantro, lime.</h2></div>
+<div class="beat" data-in="0.68" data-peak="0.75" data-out="0.83" style="right:6vw;bottom:18vh;text-align:right"><span class="k">Step 3</span><h2>Green<br>salsa.</h2></div>
+<div class="beat" data-in="0.84" data-peak="0.9" data-out="2" style="left:6vw;bottom:14vh"><span class="k">Mon&ndash;Fri &middot; 11 AM &ndash; 8 PM</span><h2>Taco night.</h2><div class="fcta"><a class="btn" href="tel:+18722443360">Call (872) 244-3360</a><a class="btn ghost" href="https://ohbz.com/qr/9a67fa23-414d-404b-8c0e-3e2bc2885f0e" target="_blank" rel="noopener">See the menu</a></div></div>
+<p class="sample">Sample film &middot; we&rsquo;d reshoot your real kitchen</p>
+<div class="seam"></div></div></section>
+
+<section class="section blk stmt" id="top2"><div class="wrap rv-in"><h2 class="mega">Made fresh.<br><em>Every order.</em></h2><p class="lede">A neighborhood taco spot on 47th Street. Tacos, burritos and nachos, with vegan and vegetarian options on the menu.</p>
+<div class="chips"><span>Tacos</span><span>Burritos</span><span>Nachos</span><span>Taco bowls</span><span>Vegan &amp; vegetarian</span></div></div></section>
+<div class="tape" aria-hidden="true"><div>Fresh to order &#9733; Tacos &#9733; Burritos &#9733; Nachos &#9733; Taqueria Varitas &#9733; Fresh to order &#9733; Tacos &#9733; Burritos &#9733; Nachos &#9733; Taqueria Varitas &#9733; Fresh to order &#9733; Tacos &#9733; Burritos &#9733; Nachos &#9733; Taqueria Varitas &#9733; Fresh to order &#9733; Tacos &#9733; Burritos &#9733; Nachos &#9733; Taqueria Varitas &#9733;</div></div>
+
+<section class="section blk sunb" id="words"><div class="wrap"><div class="rv-in"><h2 class="big">What folks<br>say.</h2>
+<div class="stick">
+<div class="sticker"><blockquote>&ldquo;The hole in the wall neighborhood taco spot of your dreams. They have something for everyone including vegan and vegetarian options. Everything is made fresh to order and is flavorful and delicious.&rdquo;</blockquote><cite>Google review &middot; 5 stars</cite></div>
+<div class="sticker"><blockquote>&ldquo;This place was so awesome. By far the best Mexican food I've found in the area.&rdquo;</blockquote><cite>Google review &middot; 5 stars</cite></div>
+<div class="sticker"><blockquote>&ldquo;It's been a while since I had nachos that tasted so good. Everything was fresh and well-seasoned! You could tell it was intentionally made with care.&rdquo;</blockquote><cite>Google review &middot; 5 stars</cite></div>
+</div><div class="score"><b>4.4</b><span>out of 5 &middot; 463 Google reviews</span></div></div></div></section>
+
+<section class="section blk tealb" id="order"><div class="wrap order rv-in"><div><h2 class="big">Call it in.<br>Come get it.</h2><address>700 E 47th St<br>Chicago, IL 60653<br><a href="https://www.google.com/maps/search/?api=1&query=Taqueria+Varitas+700+E+47th+St+Chicago" target="_blank" rel="noopener">Directions &rarr;</a></address><div class="fcta"><a class="btn red" href="tel:+18722443360">Call (872) 244-3360</a><a class="btn ghost" href="https://ohbz.com/qr/9a67fa23-414d-404b-8c0e-3e2bc2885f0e" target="_blank" rel="noopener">See the menu</a></div></div>
+<div><div class="week"><div><b>Mon</b><span>11&ndash;8</span></div><div><b>Tue</b><span>11&ndash;8</span></div><div><b>Wed</b><span>11&ndash;8</span></div><div><b>Thu</b><span>11&ndash;8</span></div><div><b>Fri</b><span>11&ndash;8</span></div><div class="off"><b>Sat</b><span>Closed</span></div><div class="off"><b>Sun</b><span>Closed</span></div></div><p class="hrs"><em>Monday to Friday</em> &middot; 11 AM to 8 PM</p></div></div></section>
+</main>
+<footer><span>&copy; Taqueria Varitas &middot; 700 E 47th St, Chicago</span><span><a href="https://facebook.com/389928061410263" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.020 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.890v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg></a> &nbsp; Preview built by Richard Sanches &middot; film is a generated sample</span></footer>
+<div class="sticky" id="sticky"><a href="tel:+18722443360">Call (872) 244-3360</a><a class="s" href="https://ohbz.com/qr/9a67fa23-414d-404b-8c0e-3e2bc2885f0e" target="_blank" rel="noopener">Menu</a></div>
+<script>window.FILM={landscape:{dir:"frames",frames:600,poster:"poster.jpg",seam:"#271209"},portrait:{dir:"frames-m",frames:600,poster:"poster-m.jpg",seam:"#301609"},bg:"#1a0d06",light:false};
+addEventListener('scroll',()=>{const f=document.querySelector('.film'),r=f.getBoundingClientRect(),p=-r.top/Math.max(1,r.height-innerHeight);document.getElementById('sticky').classList.toggle('on',scrollY>innerHeight*.6&&!(p>.82&&p<1.02));},{passive:true});</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="../js/film-wt.js"></script></body></html>

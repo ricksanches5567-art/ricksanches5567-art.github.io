@@ -1,0 +1,97 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>J.P.S Barber Shop &middot; 4005 N Kedzie Ave, Chicago</title>
+<meta name="description" content="J.P.S Barber Shop, 4005 N Kedzie Ave, Irving Park, Chicago. An old-school barber shop. Tuesday to Saturday, 9 to 6. Rated 4.8 on Google.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><rect width='10' height='10' fill='%23c39a4a'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b110e;--ink:#efe3c6;--brass:#c39a4a;--leather:#1f3a2c;--line:rgba(195,154,74,.45);--disp:'Playfair Display',serif;--body:'Cormorant Garamond',serif}
+*{box-sizing:border-box;margin:0;padding:0}html{background:var(--bg)}body{font-family:var(--body);font-size:20px;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.site-header{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,4vw,48px);color:#f6ecd2;transition:color .3s}
+.site-header::before{content:"";position:absolute;inset:0 0 auto 0;height:180%;z-index:-1;background:linear-gradient(to bottom,rgba(5,3,1,.7),rgba(5,3,1,0))}
+.brand{font-family:var(--disp);font-weight:900;font-size:clamp(16px,2vw,21px);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;text-shadow:0 1px 22px rgba(0,0,0,.6)}
+.site-header nav a{font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;margin-left:24px;text-shadow:0 1px 22px rgba(0,0,0,.6)}
+.site-header nav .hc{border:1px solid var(--brass);color:var(--brass);padding:7px 16px}
+@media(max-width:640px){.site-header nav a:not(.hc){display:none}}
+.film{height:900vh;position:relative}.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.stage canvas{width:100%;height:100%;display:block;background:var(--bg) url(poster.jpg) center/cover no-repeat}
+@media (orientation:portrait) and (max-width:900px){.stage canvas{background-image:url(poster-m.jpg)}}
+.loadbar{position:absolute;left:0;right:0;bottom:0;height:2px;z-index:5;transition:opacity .6s}.loadbar i{display:block;height:100%;background:var(--brass);transform:scaleX(0);transform-origin:0 50%;transition:transform .2s}.loaded .loadbar{opacity:0}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,.65))}
+.seam{position:absolute;inset:0;background:var(--bg);opacity:0;pointer-events:none}
+.beat{position:absolute;color:#f6ecd2;opacity:0;will-change:opacity,transform;max-width:min(660px,88vw)}
+.beat::before{content:"";position:absolute;z-index:-1;inset:-70% -24% -70% -14%;background:radial-gradient(60% 58% at 22% 50%,rgba(4,2,0,.72),rgba(4,2,0,.4) 45%,transparent 78%)}
+.beat h1,.beat h2{font-family:var(--disp);font-weight:900;font-style:italic;line-height:.98;letter-spacing:-.005em;text-shadow:0 2px 30px rgba(0,0,0,.6)}
+.beat h1{font-size:clamp(52px,9.5vw,138px)}.beat h2{font-size:clamp(38px,5.8vw,88px)}.beat p{margin-top:14px;font-size:clamp(18px,1.6vw,23px);line-height:1.4;max-width:34ch}
+.k{font-size:15px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--brass);margin-bottom:14px;display:block}
+.pill{display:inline-flex;gap:10px;align-items:center;margin-top:20px;padding:8px 18px;border:1px solid var(--line);font-size:18px}.pill b{font-family:var(--disp);font-size:22px;color:var(--brass)}
+.ch{display:inline-block}
+.fcta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;padding:15px 28px;background:var(--brass);color:#150e03;text-decoration:none;font-weight:600;font-size:19px;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 0 0 1px #150e03 inset,0 0 0 4px rgba(195,154,74,.3)}
+.btn.ghost{background:transparent;color:#f6ecd2;box-shadow:none;border:1px solid rgba(246,236,210,.6)}
+.sample{position:absolute;right:clamp(14px,3vw,32px);bottom:clamp(14px,3vh,28px);font-size:14px;font-style:italic;color:rgba(246,236,210,.65);z-index:6;max-width:60vw;text-align:right}
+@media(max-width:640px){.sample{bottom:auto;top:66px;right:16px}}
+/* after film: framed shop card, centred single column */
+.card{max-width:780px;margin:0 auto;padding:clamp(70px,10vw,130px) clamp(18px,5vw,40px);text-align:center}
+.frame{border:1px solid var(--brass);padding:8px}.frame>div{border:1px solid var(--line);padding:clamp(34px,6vw,76px) clamp(20px,5vw,60px)}
+.rule{display:flex;align-items:center;gap:16px;justify-content:center;color:var(--brass);font-size:15px;letter-spacing:.3em;text-transform:uppercase;font-weight:600}.rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--line)}
+.title{font-family:var(--disp);font-weight:900;font-style:italic;font-size:clamp(44px,8vw,96px);line-height:1;margin:22px 0 10px}
+.sub{font-size:clamp(20px,2.2vw,26px);line-height:1.45;opacity:.88;max-width:34ch;margin:0 auto}
+.orn{color:var(--brass);letter-spacing:1em;margin:34px 0 0;font-size:16px}
+.rv-in{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}.section.in .rv-in{opacity:1;transform:none}
+.pull{margin:44px auto 0;max-width:620px}.pull blockquote{font-family:var(--disp);font-style:italic;font-weight:500;font-size:clamp(22px,2.6vw,31px);line-height:1.45}.pull blockquote::before{content:"\201C";display:block;font-size:80px;line-height:.5;color:var(--brass);margin-bottom:10px}
+.pull cite{display:block;margin-top:16px;font-style:normal;font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass)}
+.pull+.pull{margin-top:56px;padding-top:56px;border-top:1px solid var(--line)}
+.board{margin:34px auto 0;max-width:460px;text-align:left}
+.board div{display:flex;align-items:baseline;gap:10px;padding:12px 0;font-size:clamp(20px,2.2vw,25px)}.board div::before{content:none}
+.board span.d{font-family:var(--disp);font-weight:700}.board i{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}.board .x{opacity:.55;font-style:italic}
+.addr{font-size:clamp(22px,2.4vw,29px);line-height:1.4;margin-top:30px}
+.addr a.dir{display:inline-block;margin-top:12px;font-size:16px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)}
+.card .fcta{justify-content:center}
+footer{text-align:center;padding:10px 20px 110px;font-size:15px;opacity:.7;line-height:1.7}
+footer svg{width:16px;height:16px;vertical-align:middle;fill:currentColor}
+.sticky{display:none}
+@media(max-width:760px){.sticky{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30;gap:8px;transform:translateY(140%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}.sticky.on{transform:none}
+.sticky a{flex:1;text-align:center;padding:16px 10px;font-weight:600;text-decoration:none;background:var(--brass);color:#150e03;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 10px 30px rgba(0,0,0,.6)}.sticky a.s{flex:.7;background:#17261d;color:#efe3c6;border:1px solid var(--line)}}
+@media (prefers-reduced-motion: reduce){.rv-in{opacity:1;transform:none;transition:none}}
+</style></head><body>
+<header class="site-header"><a class="brand" href="#top">J.P.S Barber Shop</a><nav><a href="#hours">Hours</a><a href="#words">Words</a><a class="hc" href="tel:+17734639715">Call</a></nav></header>
+<main id="top">
+<section class="film" aria-label="J.P.S Barber Shop film"><div class="stage"><canvas role="img" aria-label="A hot towel, hand lather and a steady razor in an old-school barbershop"></canvas><noscript><img src="poster.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></noscript><div class="vig"></div><div class="loadbar"><i></i></div><div class="grain"></div>
+<div class="beat" data-in="-0.1" data-peak="0" data-out="0.16" style="left:6vw;bottom:14vh"><span class="k">4005 N Kedzie Ave &middot; Irving Park</span><h1 data-split>Old school.</h1><span class="pill"><b>4.8</b> &#9733; &middot; Google reviews</span></div>
+<div class="beat" data-in="0.24" data-peak="0.33" data-out="0.44" style="right:6vw;top:24vh;text-align:right"><span class="k">One chair</span><h2>Slow<br>down.</h2></div>
+<div class="beat" data-in="0.48" data-peak="0.57" data-out="0.66" style="left:6vw;top:22vh"><span class="k">No rush</span><h2>Take your<br>time.</h2></div>
+<div class="beat" data-in="0.68" data-peak="0.75" data-out="0.83" style="right:6vw;bottom:18vh;text-align:right"><span class="k">Careful work</span><h2>Steady<br>hand.</h2></div>
+<div class="beat" data-in="0.84" data-peak="0.9" data-out="2" style="left:6vw;bottom:14vh"><span class="k">Tuesday &ndash; Saturday &middot; 9 to 6</span><h2>Walk out<br>sharp.</h2><div class="fcta"><a class="btn" href="tel:+17734639715">Call (773) 463-9715</a><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=J.P.S+Barber+Shop+4005+N+Kedzie+Ave+Chicago" target="_blank" rel="noopener">Directions</a></div></div>
+<p class="sample">Sample film &middot; we&rsquo;d reshoot your real shop</p>
+<div class="seam"></div></div></section>
+
+<section class="section card" id="hours"><div class="frame rv-in"><div>
+<div class="rule">Irving Park &middot; Chicago</div>
+<h2 class="title">One chair.<br>No gimmicks.</h2>
+<p class="sub">An old-school barber shop on Kedzie Avenue. Rated 4.8 on Google.</p>
+<div class="board"><div><span class="d">Monday</span><i></i><span class="x">Closed</span></div><div><span class="d">Tuesday &ndash; Saturday</span><i></i><span>9 AM &ndash; 6 PM</span></div><div><span class="d">Sunday</span><i></i><span class="x">Closed</span></div></div>
+<p class="orn" aria-hidden="true">&#9830; &#9830; &#9830;</p></div></div></section>
+
+<section class="section card" id="words" style="padding-top:0"><div class="rv-in">
+<div class="rule">From Google reviews</div>
+<div class="pull"><blockquote>A true old school barber shop There aren’t many barber shops like this one anymore.... while most places cater to a new kind of guest seeking barber service...meaning with gimmicks and high prices.</blockquote><cite>Google review &middot; 5 stars</cite></div>
+<div class="pull"><blockquote>This man is professional, personable and overall does a great job</blockquote><cite>Google review &middot; 4 stars</cite></div>
+<div class="pull"><blockquote>Nice guy!</blockquote><cite>Google review &middot; 5 stars</cite></div>
+</div></section>
+
+<section class="section card" id="visit" style="padding-top:0"><div class="frame rv-in"><div>
+<div class="rule">Come by</div>
+<h2 class="title" style="font-size:clamp(40px,7vw,80px)">Walk in<br>sharp. Walk out<br>sharper.</h2>
+<address class="addr" style="font-style:normal">4005 N Kedzie Ave<br>Chicago, IL 60618<br><a class="dir" href="https://www.google.com/maps/search/?api=1&query=J.P.S+Barber+Shop+4005+N+Kedzie+Ave+Chicago" target="_blank" rel="noopener">Directions &rarr;</a></address>
+<div class="fcta"><a class="btn" href="tel:+17734639715">Call (773) 463-9715</a></div>
+</div></div></section>
+</main>
+<footer>&copy; J.P.S Barber Shop &middot; 4005 N Kedzie Ave, Chicago<br><a href="https://facebook.com/145853402103396" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.020 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.890v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg></a> &nbsp; Preview built by Richard Sanches &middot; film is a generated sample</footer>
+<div class="sticky" id="sticky"><a href="tel:+17734639715">Call (773) 463-9715</a><a class="s" href="https://www.google.com/maps/search/?api=1&query=J.P.S+Barber+Shop+4005+N+Kedzie+Ave+Chicago" target="_blank" rel="noopener">Directions</a></div>
+<script>window.FILM={landscape:{dir:"frames",frames:600,poster:"poster.jpg",seam:"#0a0302"},portrait:{dir:"frames-m",frames:600,poster:"poster-m.jpg",seam:"#040502"},bg:"#0b110e",light:false};
+addEventListener('scroll',()=>{const f=document.querySelector('.film'),r=f.getBoundingClientRect(),p=-r.top/Math.max(1,r.height-innerHeight);document.getElementById('sticky').classList.toggle('on',scrollY>innerHeight*.6&&!(p>.82&&p<1.02));},{passive:true});</script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="../js/film-wt.js"></script></body></html>
